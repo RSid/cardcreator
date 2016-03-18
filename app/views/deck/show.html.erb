@@ -1,0 +1,6 @@
+<%= @deck.name %>
+<%= @deck.description %>
+
+<%= link_to 'Destroy', deck_path(@deck),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
