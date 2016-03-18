@@ -1,24 +1,30 @@
+<head>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
+</head>
+
 <h2><%= @deck.name %></h2>
 <p><%= @deck.description %></p>
 
 <%= link_to 'Destroy', deck_path(@deck), method:
       :delete,
       data: { confirm: 'Are you sure?' } %>
+<br><br>
 
-<ul>
+<ul class = "card-list">
   <% @cards.each do |card| %>
-    <li>
-      <%= card.name %>
-      <%= link_to 'destroy', [card.deck, card], method:
-            :delete,
-            data: { confirm: 'Are you sure?' } %>
-      <br>
-      <%= card.description %>
-    </li>
+
+      <li class ="card">
+        <strong><%= card.name %></strong>
+        <%= link_to 'delete', [card.deck, card], method:
+              :delete,
+              data: { confirm: 'Are you sure?' } %>
+        <br><br>
+        <%= card.description %>
+      </li>
+
   <% end %>
 </ul>
-
-
 
 
 <h4>Add a card to the deck</h4>
