@@ -17,7 +17,7 @@ class DecksController < ApplicationController
   def show
     @deck = Deck.find(params[:id])
     @cards = @deck.cards
-    #binding.pry
+
     @card = Card.new
   end
 
@@ -25,7 +25,7 @@ class DecksController < ApplicationController
     @deck = Deck.find(params[:id])
     @deck.destroy
 
-    redirect_to deck_index_path
+    redirect_to decks_path
   end
 
   private

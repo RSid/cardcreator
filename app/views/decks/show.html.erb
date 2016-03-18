@@ -1,22 +1,27 @@
-<%= @deck.name %>
-<br>
-<%= @deck.description %>
+<h2><%= @deck.name %></h2>
+<p><%= @deck.description %></p>
+
+<%= link_to 'Destroy', deck_path(@deck), method:
+      :delete,
+      data: { confirm: 'Are you sure?' } %>
 
 <ul>
   <% @cards.each do |card| %>
     <li>
       <%= card.name %>
+      <%= link_to 'destroy', [card.deck, card], method:
+            :delete,
+            data: { confirm: 'Are you sure?' } %>
       <br>
       <%= card.description %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to 'Destroy', deck_path(@deck), method:
-      :delete,
-      data: { confirm: 'Are you sure?' } %>
 
 
+
+<h4>Add a card to the deck</h4>
 <%= form_for([@deck, @card]) do |f| %>
   <p>
     <%= f.label :name %><br>
