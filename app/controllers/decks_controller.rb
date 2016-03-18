@@ -1,4 +1,4 @@
-class DeckController < ApplicationController
+class DecksController < ApplicationController
   def index
     @decks = Deck.all();
   end
@@ -8,7 +8,6 @@ class DeckController < ApplicationController
   end
 
   def create
-
     @deck = Deck.new(deck_params)
 
     @deck.save
@@ -17,6 +16,9 @@ class DeckController < ApplicationController
 
   def show
     @deck = Deck.find(params[:id])
+    @cards = @deck.cards
+    #binding.pry
+    @card = Card.new
   end
 
   def destroy

@@ -7,6 +7,7 @@
   <% @decks.each do |deck| %>
     <li>
       <%= link_to deck.name, deck_path(deck) %>
+      <br>
       <%= deck.description %>
     </li>
   <% end %>
