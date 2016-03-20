@@ -1,13 +1,15 @@
-<h1>See all decks</h1>
+<body class="content">
+  <h1>See all decks</h1>
 
-<%= link_to 'New deck', new_deck_path %>
+  <%= link_to 'New deck', new_deck_path %>
 
-<ul>
-  <% @decks.each do |deck| %>
-    <li>
-      <%= link_to deck.name, deck_path(deck) %>
-      <br>
-      <%= deck.description %>
-    </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @decks.each do |deck| %>
+      <li>
+        <%= link_to deck.name, deck_path(deck) %>
+        <br>
+        <%= deck.description %>
+      </li>
+    <% end %>
+  </ul>
+</body>

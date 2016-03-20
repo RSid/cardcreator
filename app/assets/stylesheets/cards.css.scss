@@ -13,7 +13,7 @@
 }
 
 .card {
-  background-color: pink;
+  background-color: #BCC6CC;
   border: 2px solid grey;
   border-radius: 2px;
   margin: 5px;
@@ -21,4 +21,26 @@
   min-height: 200px;
   min-width: 100px;
   width: 25%;
+}
+
+h2 {
+  display: inline;
+}
+
+.delete {
+  display: inline;
+}
+
+.center {
+  text-align: center;
+}
+
+#left-justify {
+  text-align: left;
+}
+
+.content {
+  background-color: #E5E4E2;
+  margin: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
