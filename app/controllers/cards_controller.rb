@@ -29,6 +29,15 @@ class CardsController < ApplicationController
     redirect_to deck_path(deck)
   end
 
+  def copy_card
+    @card = Card.find(params[:id])
+    deck = @card.deck
+
+    newCard = @card.dup
+    newCard.save
+    redirect_to deck_path(deck)
+  end
+
   private
   def card_params
     params.require(:card).permit(:name, :description)

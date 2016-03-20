@@ -26,9 +26,11 @@
         <li class ="card">
 
           <strong><%= card.name %></strong>
-          <%= link_to(content_tag(:i,nil,class: "fa fa-trash-o"), [card.deck, card], method:
-                :delete,
-                data: { confirm: 'Are you sure?' }) %>
+          <%= link_to(content_tag(:i,nil,class: "fa fa-copy"), copy_card_deck_card_path(@deck,card),
+           method: :post)%>
+
+          <%= link_to(content_tag(:i,nil,class: "fa fa-trash-o"), [card.deck, card],
+          method: :delete, data: { confirm: 'Are you sure?' }) %>
 
           <br><br>
           <div class="left-justify">
