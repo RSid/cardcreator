@@ -2,6 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//Whole app
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #4863A0
+}
+
+a:visited {
+  color: #6A287E
+}
+
+.inline {
+  display: inline;
+}
+
+.center {
+  text-align: center;
+}
+
+.left-justify {
+  text-align: left;
+}
+
+.content {
+  background-color: #E5E4E2;
+  margin: 0px;
+  padding: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.fa-trash-o {
+  color: #C24641;
+}
+
+.fa-plus {
+  color: #85BB65;
+}
+
+//homepage
+#deck-list {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: solid 2px #2B3856;
+}
+
+#deck-list > li {
+  margin-bottom: 15px;
+}
+
+//Cards
 .card-list {
   list-style-type: none;
   overflow: hidden;
@@ -9,7 +64,6 @@
 }
 .card-list li {
   float: left;
-
 }
 
 .card {
@@ -21,26 +75,4 @@
   min-height: 200px;
   min-width: 100px;
   width: 25%;
-}
-
-h2 {
-  display: inline;
-}
-
-.delete {
-  display: inline;
-}
-
-.center {
-  text-align: center;
-}
-
-#left-justify {
-  text-align: left;
-}
-
-.content {
-  background-color: #E5E4E2;
-  margin: 0px;
-  font-family: 'Source Sans Pro', sans-serif;
 }

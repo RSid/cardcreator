@@ -6,15 +6,17 @@
 
 <body class="content">
   <div class="center">
-    <h2><%= @deck.name %></h2>
-    <div class="delete">
-      <%= link_to 'Destroy deck', deck_path(@deck), method:
+    <div class="left-justify">
+      <%= link_to(content_tag(:i,nil,class: "fa fa-arrow-left"), decks_path) %>
+    </div>
+
+    <h2 class="inline"><%= @deck.name %></h2>
+    <div class="inline">
+      <%= link_to(content_tag(:i,nil,class: "fa fa-trash-o"), deck_path(@deck), method:
             :delete,
-            data: { confirm: 'Are you sure?' } %>
+            data: { confirm: 'Are you sure?' }) %>
     </div>
     <p><%= @deck.description %></p>
-
-
 
   <br><br>
 
@@ -24,12 +26,12 @@
         <li class ="card">
 
           <strong><%= card.name %></strong>
-          <%= link_to 'delete', [card.deck, card], method:
+          <%= link_to(content_tag(:i,nil,class: "fa fa-trash-o"), [card.deck, card], method:
                 :delete,
-                data: { confirm: 'Are you sure?' } %>
+                data: { confirm: 'Are you sure?' }) %>
 
           <br><br>
-          <div id="left-justify">
+          <div class="left-justify">
             <%= card.description %>
           </div>
         </li>
@@ -56,6 +58,6 @@
     </p>
   <% end %>
 
-  <%= link_to 'Back', decks_path %>
+
   </div>
 </body>

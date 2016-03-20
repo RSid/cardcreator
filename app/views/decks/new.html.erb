@@ -1,4 +1,7 @@
 <body class="content center">
+  <div class="left-justify">
+    <%= link_to(content_tag(:i,nil,class: "fa fa-arrow-left"), decks_path) %>
+  </div>
   <h2>Create a new deck</h2>
 
   <%= form_for :deck, url: decks_path do |f| %>
@@ -16,5 +19,4 @@
       <%= f.submit %>
     </p>
   <% end %>
-  <%= link_to 'Back', decks_path %>
 </body>
