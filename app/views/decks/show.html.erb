@@ -10,7 +10,7 @@
       <%= link_to(content_tag(:i,nil,class: "fa fa-arrow-left"), decks_path) %>
     </div>
 
-    <h2 class="inline"><%= @deck.name %></h2>
+    <h2 class="inline"><%= @deck.name %> - <%= @cards.length %> cards</h2>
     <div class="inline">
       <%= link_to(content_tag(:i,nil,class: "fa fa-trash-o"), deck_path(@deck), method:
             :delete,
@@ -21,10 +21,12 @@
   <br><br>
 
   <ul class = "card-list">
-    <% @cards.each do |card| %>
+    <% @cards.each_with_index do |card, index| %>
 
         <li class ="card">
-
+          <div class="card-number">
+            <%= index + 1 %>
+          </div>
           <strong><%= card.name %></strong>
           <%= link_to(content_tag(:i,nil,class: "fa fa-copy"), copy_card_deck_card_path(@deck,card),
            method: :post)%>
