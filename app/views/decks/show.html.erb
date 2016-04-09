@@ -1,6 +1,5 @@
 <head>
   <%= stylesheet_link_tag    'application', media: 'all'%>
-  <%= javascript_include_tag 'application' %>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 </head>
 
@@ -13,8 +12,7 @@
     <h2 class="inline"><%= @deck.name %> - <%= @cards.length %> cards</h2>
     <div class="inline">
       <%= link_to(content_tag(:i,nil,class: "fa fa-trash-o"), deck_path(@deck), method:
-            :delete,
-            data: { confirm: 'Are you sure?' }) %>
+            :delete, confirm: 'Are you sure?') %>
     </div>
     <p><%= @deck.description %></p>
 
